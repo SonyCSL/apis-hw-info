@@ -109,7 +109,7 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
     * 取得項目 <span style="color: gray; ">_*印は必須ではない_</span>
       |dcdc_status| | | | |
       |:-:|:-:|:--:|:--:|:--:|
-      |ステータス状態番号(status) |アラーム番号(alerm) |アラーム情報(alarmState) |<span style="color: gray; ">_DCDC動作状態(runningState)*_</span>|動作モード(operationMode)|
+      |ステータス状態番号(status) |アラーム番号(alarm) |アラーム情報(alarmState) |<span style="color: gray; ">_DCDC動作状態(runningState)*_</span>|動作モード(operationMode)|
 
       |meter| | | |
       |:-:|:-:|:-:|:-:|
@@ -124,7 +124,7 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
       |param：初期設定(の一部)|　|　|　|
       |:-:|:-:|:-:|:-:|
       |グリッド|上限電流値(dig)|<span style="color: gray; ">_過電圧閾値(ogv)*_</span>|<span style="color: gray; ">_低電圧閾値(ugv)*_</span>|　|
-      |バッテリ|<span style="color: gray; ">_上限電値流(cib)*_</span>|<span style="color: gray; ">_過電圧閾値(obv)*_|<span style="color: gray; ">_低電圧閾値(ubv)*_</span>|
+      |バッテリ|<span style="color: gray; ">_上限電流値(cib)*_</span>|<span style="color: gray; ">_過電圧閾値(obv)*_|<span style="color: gray; ">_低電圧閾値(ubv)*_</span>|
 
     * 制御項目
         |mode|dvg|dig|drg|
