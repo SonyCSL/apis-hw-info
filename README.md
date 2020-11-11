@@ -16,7 +16,7 @@ These recommended hardware specifications are useful as reference information wh
 
 <br>
 
-**When designing the hardware for the energy sharing system, in addition to reading the [Document](https://github.com/oes-github/apis-hw-requirements/blob/main/MAIN-DOCUMENT_JP.md) below, keep in mind the following:**
+**When designing the hardware for the energy sharing system, in addition to reading the [Document](/MAIN-DOCUMENT_JP.md) below, keep in mind the following:**
 
 
 
@@ -36,6 +36,6 @@ These recommended hardware specifications are useful as reference information wh
 
 
 ## Documentation
-&emsp;[Documentation(EN)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_EN.md)
+&emsp;[Documentation(EN)](/MAIN-DOCUMENT_EN.md)
 <br>
-&emsp;[Documentation(JP)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_JP.md)
+&emsp;[Documentation(JP)](/MAIN-DOCUMENT_JP.md)
