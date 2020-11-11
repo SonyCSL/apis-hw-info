@@ -16,7 +16,7 @@ These recommended hardware specifications are useful as reference information wh
 
 <br>
 
-**When designing the hardware for the energy sharing system, in addition to reading the [Document](/MAIN-DOCUMENT_JP.md) below, keep in mind the following:**
+**When designing the hardware for the energy sharing system, in addition to reading the [Document](/MAIN-DOCUMENT_EN.md) below, keep in mind the following:**
 
 
 
