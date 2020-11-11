@@ -8,7 +8,7 @@ APIS hardware information presented here provide information on hardware necessa
 <br>
 
 <div align="center">
-<img src="media/thumbnail.PNG" alt="システム構成" width="600" height="400">
+<img src="media/thumbnail.PNG" alt="Composition of system" width="600" height="400">
 </div>
 <br>
 
@@ -36,5 +36,5 @@ These recommended hardware specifications are useful as reference information wh
 
 
 ## Documentation
-&emsp;[Documentation(EN)](https://github.com/oes-github/apis-hw-requirements/blob/master/MAIN-DOCUMENT_EN.md)
-&emsp;[Documentation(JP)](https://github.com/oes-github/apis-hw-requirements/blob/master/MAIN-DOCUMENT_JP.md)
+&emsp;[Documentation(EN)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_EN.md)
+&emsp;[Documentation(JP)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_JP.md)
