@@ -37,4 +37,5 @@ These recommended hardware specifications are useful as reference information wh
 
 ## Documentation
 &emsp;[Documentation(EN)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_EN.md)
+<br>
 &emsp;[Documentation(JP)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_JP.md)
