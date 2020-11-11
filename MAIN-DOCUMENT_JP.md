@@ -96,12 +96,12 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
       * 設定順序参考(1,2,3の順：同じ数字の場合は順不同)
         * (以下は参考であり、実際のシステムにおいては、動作に合わせて適切な手順になるよう設計・評価すること)
   
-      |遷移後のMode→<br>↓遷移前のMode|停止 Mode<br>例:dvg=350V,dig=0A|CC Mode(放電)<br>例:dvg=380V,dig=2A)|CC Mode(充電)<br>(例:dvg=350V,dig=2A)|CV Mode<br>dvg=350V,dig=7.5A)|
+      |遷移後のMode→<br>↓遷移前のMode|停止 Mode<br>例:dvg=350V,dig=0A|CC Mode(放電)<br>例:dvg=380V,dig=2A|CC Mode(充電)<br>例:dvg=350V,dig=2A|CV Mode<br>例:dvg=350V,dig=7.5A|
       |:--|:--|:--|:--|:--|
       |停止 Mode<br>例:dvg=350V,dig=0A|1. dvg 設定<br>1. dig 設定<br>2. Mode 設定|1. dvg 設定<br>1. dig 設定<br>2. Mode 設定|1. dvg 設定<br>1. dig 設定<br>2. Mode 設定|1. dvg 設定<br>1. dig 設定<br>2. Mode 設定|
-      |CC Mode(放電)<br>例:dvg=380V,dig=2A)|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|1. dvg 設定<br>2. Mode 設定<br>3. dig 設定|
-      |CC Mode(充電)<br>(例:dvg=350V,dig=2A|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|1. dvg 設定<br>2. Mode 設定<br>3. dig 設定|
-      |CV Mode<br>dvg=350V,dig=7.5A)|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|
+      |CC Mode(放電)<br>例:dvg=380V,dig=2A|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|1. dvg 設定<br>2. Mode 設定<br>3. dig 設定|
+      |CC Mode(充電)<br>例:dvg=350V,dig=2A|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|1. dvg 設定<br>2. Mode 設定<br>3. dig 設定|
+      |CV Mode<br>例:dvg=350V,dig=7.5A|1. Mode 設定<br>2. dvg 設定<br>2. dig 設定|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|APISでは<br>実行しない遷移|
 
     * Mode 制御指示(set)時の戻り値は、モード遷移後の値を返すこと
 
@@ -178,11 +178,10 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
 
 ## **5. ハードウェア要求に関わるapis-mainの設定項目**
 ### 5-1. ハードウェア情報の読出頻度
-* ハードウェア情報の読出頻度
-  * apis-main は、定期的に自ユニットのハードウェア情報を読み出して融通制御実施する。
-    * この読み出し頻度によって、自ユニット状態確認や融通の Deal 生成などのタイミングが変化するので、ハードウェアの応答速度と、融通システムに合わせて調整すること。
-  * 設定方法：apis-main の設定ファイル Policy.json 内の以下の項目にて設定する。
-    * controller.dataAcquisitionPeriodMsec
+* apis-main は、定期的に自ユニットのハードウェア情報を読み出して融通制御実施する。
+  * この読み出し頻度によって、自ユニット状態確認や融通の Deal 生成などのタイミングが変化するので、ハードウェアの応答速度と、融通システムに合わせて調整すること。
+* 設定方法：apis-main の設定ファイル Policy.json 内の以下の項目にて設定する。
+  * controller.dataAcquisitionPeriodMsec
 
 <br>
 
