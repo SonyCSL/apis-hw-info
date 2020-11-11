@@ -3,8 +3,8 @@
 **目次**
 - [Battery System Communication Specifications (Implementation Example)](#battery-system-communication-specifications-implementation-example)
   - [**1. Terms and Abbreviations**](#1-terms-and-abbreviations)
-  - [**2. Overview **](#2-overview-)
-  - [**3. 通信仕様**](#3-通信仕様)
+  - [**2. Overview**](#2-overview)
+  - [**3. Communication Specifications**](#3-communication-specifications)
   - [**4. Communication Sequence**](#4-communication-sequence)
   - [**5. Register Map**](#5-register-map)
   - [**6. Command Format**](#6-command-format)
@@ -26,7 +26,8 @@
 
 ---
 
-## **2. Overview **
+## **2. Overview**
+
 The communication specifications presented here describe communication between [APIS](https://github.com/SonyCSL/APIS), the software for energy sharing developed by Sony CSL that enables autonomous decentralized control, and the actual battery system. For communication specification examples, this document uses [dcdc_batt_comm](https://github.com/SonyCSL/apis-dcdc_batt_comm) as the battery system’s device driver.
 
 <div align="center">
@@ -37,7 +38,7 @@ The communication specifications presented here describe communication between [
 
 ---
 
-## **3. 通信仕様**
+## **3. Communication Specifications**
 
 |Item|Specifications|Remarks|
 |:-:|:--|:--|
