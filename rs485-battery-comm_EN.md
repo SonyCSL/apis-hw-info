@@ -1,6 +1,6 @@
 # Battery System Communication Specifications (Implementation Example)
 
-**目次**
+**Table of Contents**
 - [Battery System Communication Specifications (Implementation Example)](#battery-system-communication-specifications-implementation-example)
   - [**1. Terms and Abbreviations**](#1-terms-and-abbreviations)
   - [**2. Overview**](#2-overview)
