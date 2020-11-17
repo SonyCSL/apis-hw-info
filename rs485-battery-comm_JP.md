@@ -96,52 +96,209 @@ Input Register の電池状態の Modbus アドレスを以下に示す。
 
 ### 6.1 Request コマンドフォーマット
 
-|Byte|コマンド<br>フォーマット名|データ名|Size|備考|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|マスタ側で指定|
-|1|Function|Function Code|1|0x04:Read Input Registers|
-|2|Data|Start Address|2|先頭アドレス Hex. Addr. Offset の値を設定|
-|3|^|^|^|^|^
-|4|^|Quantity of Input Registers|2|レジスタ(word=2byte)数(N)|
-|5|^|^|^|^|
-|6|CRC Check|CRC|2|0~5byte の CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定|
-|7|^|^|^|^|
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>コマンド<br>フォーマット名</th>
+<th>データ名</th>
+<th>Size</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>マスタ側で指定</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Function Code</td>
+<td>1</td>
+<td>0x04:Read Input Registers</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td rowspan="4">Data</td>
+<td rowspan="2">Start Address</td>
+<td rowspan="2">2</td>
+<td rowspan="2">先頭アドレス Hex. Addr. Offset の値を設定</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+
+</tr>
+<tr class="even">
+<td>4</td>
+
+<td rowspan="2">Quantity of Input Registers</td>
+<td rowspan="2">2</td>
+<td rowspan="2">レジスタ(word=2byte)数(N)
+</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+
+</tr>
+<tr class="even">
+<td>6</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">0~(Nx2)+2byteの CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+
+</tr>
+</tbody>
+</table>
+
 
 <br>
 
 ### 6.2 Response コマンドフォーマット
 
-|Byte|コマンド<br>フォーマット名|データ名|Size|備考|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|Request をそのまま設定|
-|1|Function|Function Code|1|0x04:Read Input Registers|
-|2|Data|Byte Count|1|2xN|
-|3|^|Input Register#1|2|要求レジスタ#1 内容|
-|4|^|^|^|^|
-|5|^|Input Register#2|2|要求レジスタ#2 内容|
-|6|^|^|^|^|
-|:|^|:|||
-|(Nx2)+1|^|Input Register#N|2|要求レジスタ#N 内容|
-|(Nx2)+2|^|^|||
-|(Nx2)+3|CRC Check|CRC|2|0~(Nx2)+2byteの CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定|
-|(Nx2)+4|^|^|^|^|
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>コマンド<br>フォーマット名</th>
+<th>データ名</th>
+<th>Size</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address	</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>Request をそのまま設定</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Function Code</td>
+<td>1</td>
+<td>Request をそのまま設定</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td rowspan="8">Data</td>
+<td>Byte Count</td>
+<td>1</td>
+<td>2xN</td>
+</tr>
+<tr class="odd">
+<td>3</td>
 
-||||||||
-|:-:|:-:|:-:|:-:|:-:|:-:|:--|
-||||||||
+<td rowspan="2">Input Register#1</td>
+<td rowspan="2">2</td>
+<td rowspan="2">要求レジスタ#1 内容</td>
+</tr>
+<tr class="even">
+<td>4</td>
 
+
+</tr>
+<tr class="odd">
+<td>5</td>
+
+<td rowspan="2">Input Register#2</td>
+<td rowspan="2">2</td>
+<td rowspan="2">要求レジスタ#2 内容</td>
+</tr>
+<tr class="even">
+<td>6</td>
+
+</tr>
+<tr class="odd">
+<td>:</td>
+
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr class="even">
+<td>(Nx2)+1</td>
+
+<td rowspan="2">Input Register#N</td>
+<td rowspan="2">2</td>
+<td rowspan="2">要求レジスタ#N 内容</td>
+</tr>
+<tr class="odd">
+<td>(Nx2)+2</td>
+
+</tr>
+<tr class="even">
+<td>(Nx2)+3</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">0~(Nx2)+2byteの CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定</td>
+</tr>
+<tr class="odd">
+<td>(Nx2)+4</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 
 ### 6.3 Error コマンドフォーマット
 
-|Byte|コマンド<br>フォーマット名|データ名|Size|備考|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|Request をそのまま設定|
-|1|Function|Error Code|1|0x80+0x04|
-|2|Data|Exception Code|1|01 or 02 or 03 or 04|
-|3|CRC Check|CRC|2|0~2byte の CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定|
-|4|^|^|^|^|
+
+
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>コマンド<br>フォーマット名</th>
+<th>データ名</th>
+<th>Size</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>Request をそのまま設定</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Error Code</td>
+<td>1</td>
+<td>0x80+0x04</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Data</td>
+<td>Exception Code</td>
+<td>1</td>
+<td>01 or 02 or 03 or 04</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">0~2byte の CRC 計算結果<br>CRC-Lo, CRC-Hi の順で設定</td>
+</tr>
+<tr class="even">
+<td>4</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 
