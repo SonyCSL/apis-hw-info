@@ -186,7 +186,7 @@ Input Register の電池状態の Modbus アドレスを以下に示す。
 <td>Function</td>
 <td>Function Code</td>
 <td>1</td>
-<td>Request をそのまま設定</td>
+<td>0x04:Read Input Registers</td>
 </tr>
 <tr class="even">
 <td>2</td>
@@ -252,8 +252,6 @@ Input Register の電池状態の Modbus アドレスを以下に示す。
 <br>
 
 ### 6.3 Error コマンドフォーマット
-
-
 
 <table>
 <thead>
