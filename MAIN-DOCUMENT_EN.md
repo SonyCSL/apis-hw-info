@@ -12,7 +12,6 @@
     - [3-4. Overview of Recommended Computer (Linux board) Specifications](#3-4-overview-of-recommended-computer-linux-board-specifications)
     - [3-5. Overview of Recommended Communication Line Specifications](#3-5-overview-of-recommended-communication-line-specifications)
   - [**4. Hardware Specification Requirements for apis-main Configuration**](#4-hardware-specification-requirements-for-apis-main-configuration)
-    - [Values of hardware to be prepared in advance for APIS’ operational settings (not recommended hardware specifications)](#values-of-hardware-to-be-prepared-in-advance-for-apis-operational-settings-not-recommended-hardware-specifications)
   - [**5. Apis-main Configuration Items Related to Recommended Hardware Specifications**](#5-apis-main-configuration-items-related-to-recommended-hardware-specifications)
     - [5-1. Hardware Information Readout Frequency](#5-1-hardware-information-readout-frequency)
     - [5-2. Recommended Hardware Control Speed Specifications](#5-2-recommended-hardware-control-speed-specifications)
@@ -158,7 +157,7 @@ apis-main carries energy sharings by controlling the DC/DC converter connected b
 ---
 
 ## **4. Hardware Specification Requirements for apis-main Configuration**
-### Values of hardware to be prepared in advance for APIS’ operational settings (not recommended hardware specifications)
+Values of hardware to be prepared in advance for APIS’ operational settings (not recommended hardware specifications)
 
 * Hardware specifications (values) required for configuring hwConfig.json
   * Set the appropriate values based on the specifications of the battery system and DC/DC converter that make up a unit.
