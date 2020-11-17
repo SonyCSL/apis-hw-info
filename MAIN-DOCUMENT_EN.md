@@ -5,7 +5,7 @@
 - [Energy Sharing Hardware Informations](#energy-sharing-hardware-informations)
   - [**1. Terms and Abbreviations**](#1-terms-and-abbreviations)
   - [**2. Overview of Energy Sharing System**](#2-overview-of-energy-sharing-system)
-  - [**Overview of Recommended Hardware Specifications**](#overview-of-recommended-hardware-specifications)
+  - [**3. Overview of Recommended Hardware Specifications**](#3-overview-of-recommended-hardware-specifications)
     - [3-1. Overview of Recommended Battery System Specifications](#3-1-overview-of-recommended-battery-system-specifications)
     - [3-2. Overview of Recommended DC/DC Converter Specifications](#3-2-overview-of-recommended-dcdc-converter-specifications)
     - [3-3. Overview of Recommended DC Grid (DC Lines) Specifications](#3-3-overview-of-recommended-dc-grid-dc-lines-specifications)
@@ -48,7 +48,7 @@
 
 ---
 
-## **Overview of Recommended Hardware Specifications**
+## **3. Overview of Recommended Hardware Specifications**
 ### 3-1. Overview of Recommended Battery System Specifications
 The battery system supplies power for the unit’s energy sharing system. In response to a request from apis-main, the battery system’s conditions (RSoC, energy sharing permission status) are sent, and charging/discharging of the battery take places to control a energy sharing.
 
