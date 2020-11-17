@@ -97,57 +97,213 @@ The basic format of a command is as follows.
 
 ### 6.1 Request Command Format
 
-|Byte|Name of Command Format|Data name|Size|Remarks|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|Specified on the master side.|
-|1|Function|Function Code|1|0x04:Read Input Registers|
-|2|Data|Start Address|2|Specifies the value of the starting address’s hexadecimal offset.|
-|3|^|^|^|^|^
-|4|^|Quantity of Input Registers|2|Number (N) of registers (word=2 bytes)|
-|5|^|^|^|^|
-|6|CRC Check|CRC|2|Sets the calculation result of 0-5 byte CRC in CRC-Lo, CRC-Hi order.|
-|7|^|^|^|^|
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>Name of Command Format</th>
+<th>Data name</th>
+<th>Size</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>Specified on the master side.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Function Code</td>
+<td>1</td>
+<td>0x04:Read Input Registers</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td rowspan="4">Data</td>
+<td rowspan="2">Start Address</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Specifies the value of the starting address’s hexadecimal offset.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+
+</tr>
+<tr class="even">
+<td>4</td>
+
+<td rowspan="2">Quantity of Input Registers</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Number (N) of registers (word=2 bytes)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+
+</tr>
+<tr class="even">
+<td>6</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Sets the calculation result of 0-5 byte CRC in CRC-Lo, CRC-Hi order.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+
+</tr>
+</tbody>
+</table>
+
 
 <br>
 
 ### 6.2 Response Command Format
 
-|Byte|Name of Command Format|Data name|Size|Remarks|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|Sets Request as-is|
-|1|Function|Function Code|1|0x04:Read Input Registers|
-|2|Data|Byte Count|1|2xN|
-|3|^|Input Register#1|2|Content of requested Register#1|
-|4|^|^|^|^|
-|5|^|Input Register#2|2|Content of requested Register#2|
-|6|^|^|^|^|
-|:|^|:|||
-|(Nx2)+1|^|Input Register#N|2|Content of requested Register#N|
-|(Nx2)+2|^|^|||
-|(Nx2)+3|CRC Check|CRC|2|Sets the calculation result of 0-(Nx2)+2 byte CRC in CRC-Lo, CRC-Hi order.|
-|(Nx2)+4|^|^|^|^|
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>Name of Command Format</th>
+<th>Data name</th>
+<th>Size</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address	</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>Sets Request as-is</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Function Code</td>
+<td>1</td>
+<td>0x04:Read Input Registers</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td rowspan="8">Data</td>
+<td>Byte Count</td>
+<td>1</td>
+<td>2xN</td>
+</tr>
+<tr class="odd">
+<td>3</td>
 
-||||||||
-|:-:|:-:|:-:|:-:|:-:|:-:|:--|
-||||||||
+<td rowspan="2">Input Register#1</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Content of requested Register#1</td>
+</tr>
+<tr class="even">
+<td>4</td>
+
+
+</tr>
+<tr class="odd">
+<td>5</td>
+
+<td rowspan="2">Input Register#2</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Content of requested Register#2/td>
+</tr>
+<tr class="even">
+<td>6</td>
+
+</tr>
+<tr class="odd">
+<td>:</td>
+
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr class="even">
+<td>(Nx2)+1</td>
+
+<td rowspan="2">Input Register#N</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Content of requested Register#N</td>
+</tr>
+<tr class="odd">
+<td>(Nx2)+2</td>
+
+</tr>
+<tr class="even">
+<td>(Nx2)+3</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Sets the calculation result of 0-(Nx2)+2 byte CRC in CRC-Lo, CRC-Hi order.</td>
+</tr>
+<tr class="odd">
+<td>(Nx2)+4</td>
+</tr>
+</tbody>
+</table>
+
 
 
 <br>
 
 ### 6.3 Response Command Format
 
-|Byte|Name of Command Format|Data name|Size|Remarks|
-|:-:|:-:|:-:|:-:|:--|
-|0|Address|Slave Address|1|Sets request as-is|
-|1|Function|Error Code|1|0x80+0x04|
-|2|Data|Exception Code|1|01 or 02 or 03 or 04|
-|3|CRC Check|CRC|2|Sets the calculation result of 0-2 byte CRC in CRC-Lo, CRC-Hi order.|
-|4|^|^|^|^|
+<table>
+<thead>
+<tr class="head">
+<th>Byte</th>
+<th>Name of Command Format</th>
+<th>Data name</th>
+<th>Size</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>0</td>
+<td>Address</td>
+<td>Slave Address</td>
+<td>1</td>
+<td>Sets request as-is</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Function</td>
+<td>Error Code</td>
+<td>1</td>
+<td>0x80+0x04</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Data</td>
+<td>Exception Code</td>
+<td>1</td>
+<td>01 or 02 or 03 or 04</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td rowspan="2">CRC Check</td>
+<td rowspan="2">CRC</td>
+<td rowspan="2">2</td>
+<td rowspan="2">Sets the calculation result of 0-2 byte CRC in CRC-Lo, CRC-Hi order.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 
 ### 6.4 Exeption code
-例外コードのについて以下に示す。
+Exception codes are shown below.
 
 |Code|Name|Range|Meaning|
 |:-:|:-:|:--|:--|
