@@ -2,7 +2,7 @@
 
 ## Introduction
 
-APIS hardware information presented here provide information on hardware necessary for executing PP2P energy sharings using [APIS](https://github.com/SonyCSL/APIS), Sony CSL’s energy sharing software that enables autonomous decentralized control. The energy sharings use hardware such as actual battery systems and DC/DC converters.
+APIS hardware information presented here provides information on hardware necessary for executing PP2P energy sharings using [APIS](https://github.com/SonyCSL/APIS), Sony CSL’s energy sharing software that enables autonomous decentralized control. The energy sharings use hardware such as actual battery systems and DC/DC converters.
 
 
 <br>
@@ -12,7 +12,7 @@ APIS hardware information presented here provide information on hardware necessa
 </div>
 <br>
 
-These recommended hardware specifications are useful as reference information when designing hardware that carries out not emulations but actual energy sharings between battery systems. Hardware operations thus cannot be guaranteed with these specifications. Users should therefore appropriately design, select, evaluate, and use hardware for the actual energy sharing system.
+These recommended hardware specifications are useful as reference information when designing hardware system that carries out not emulations but actual energy sharings between battery systems. Hardware operations thus cannot be guaranteed with these specifications. Users should therefore appropriately design, select, evaluate, and use hardware for the actual energy sharing system.
 
 <br>
 
