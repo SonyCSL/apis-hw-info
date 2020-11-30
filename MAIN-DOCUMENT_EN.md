@@ -40,7 +40,7 @@
 </div>
 <br>
 
-* [apis-main](https://github.com/SonyCSL/apis-main) carries out exchanges of hardware information through Web API([see Section 5 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main)) . To enable communication with the actual battery system and DC/DC converter, in general a device driver that converts Web API data to communication and control data from hardware devices is used. The recommended specifications here therefore include the device driver in hardware specifications.
+* [apis-main](https://github.com/SonyCSL/apis-main) carries out exchanges of hardware information through Web API([see Section 5 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#5-communication-specifications)) . To enable communication with the actual battery system and DC/DC converter, in general a device driver that converts Web API data to communication and control data from hardware devices is used. The recommended specifications here therefore include the device driver in hardware specifications.
 
 <br>
 <br>
@@ -66,7 +66,7 @@ The battery system supplies power for the unit’s energy sharing system. In res
     |Acquired items| |
     |:-:|:-:|
     |Relative remaining capacity<br>(RSoC: relative state-of-charge)<br>(%)| 	Flag for permitting/denying energy sharing<br>(battery_operation_status)|||
-   * *For details of communication commands and format (JSON format), see [Section 5 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main).
+   * *For details of communication commands and format (JSON format), see [Section 5 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#5-communication-specifications).
 
 
 
@@ -132,7 +132,7 @@ apis-main carries energy sharings by controlling the DC/DC converter connected b
         |Control Mode Number|DC Grid Target Voltage|DC Grid Upper-Limit Current|DC Grid Droop Rate|
       * Example of control command
         * `/dcdc/set?mode=<Mode>&dvg=<C Grid Target Voltage>&dig=<DC Grid Upper-Limit Current>&drg=<DC Grid Droop Rate>`
-        * *For details of communication commands and format (JSON format), see [Section 5 of apis-main Specification Document](https://github.com/SonyCSL/apis-main).
+        * *For details of communication commands and format (JSON format), see [Section 5 of apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#5-communication-specifications).
 
 <br>
 
@@ -143,7 +143,7 @@ apis-main carries energy sharings by controlling the DC/DC converter connected b
     * In particular, design the system by taking into account the DC grid’s current capacity. Consider the energy sharing’s maximum current per unit and the number of maximum energy sharing pairs. Also, examine the grid topology and find points where currents concentrate.
 
 ### 3-4. Overview of Recommended Computer (Linux board) Specifications
-  * See [Section 16 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main).
+  * See [Section 16 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#16-operating-environment).
 
 <br>
 
@@ -161,10 +161,10 @@ Values of hardware to be prepared in advance for APIS’ operational settings (n
 
 * Hardware specifications (values) required for configuring hwConfig.json
   * Set the appropriate values based on the specifications of the battery system and DC/DC converter that make up a unit.
-    * See [Section 6.2 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main).
+    * See [Section 6.2 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#62-hwconfigjson).
 * Hardware specifications (values) required for configuring Policy.json
   * Set the appropriate values based on the specifications of the grid (DC lines) to be implemented.
-    * See [Section 6.4 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main).
+    * See [Section 6.4 of the apis-main Specification Document](https://github.com/SonyCSL/apis-main/blob/master/doc/en/apis-main_specification_en.md#64-policyjson).
 
 <br>
 <br>
