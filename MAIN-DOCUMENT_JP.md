@@ -39,7 +39,7 @@
 </div>
 <br>
 
-* [apis-main](https://github.com/SonyCSL/apis-main) は、Web API([apis-main仕様書 5項参照](https://github.com/SonyCSL/apis-main)) にてハードウェア情報のやり取りを行い、情報の取得や制御を実施する。実際の蓄電システムや DC/DC converter と通信させるには、様々なハードウェアデバイスを使用可能にするために、Web API を各々のハードウェアデバイスの通信・制御方式へと変換する Device Driver を用意する構成が一般的である。従って、本要求は、Device Driver を含めたハードウェアに対する要求である。
+* [apis-main](https://github.com/SonyCSL/apis-main) は、Web API([apis-main仕様書 5項参照](https://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor5)) にてハードウェア情報のやり取りを行い、情報の取得や制御を実施する。実際の蓄電システムや DC/DC converter と通信させるには、様々なハードウェアデバイスを使用可能にするために、Web API を各々のハードウェアデバイスの通信・制御方式へと変換する Device Driver を用意する構成が一般的である。従って、本要求は、Device Driver を含めたハードウェアに対する要求である。
 
 <br>
 <br>
@@ -65,7 +65,7 @@
     |取得項目| |
     |:-:|:-:|
     |相対残容量[%]<br>(rsoc)|電力融通許可/不許可フラグ<br>(battery_operation_status)|||
-   * ※通信コマンドと通信フォーマット(JSON形式)の詳細は、[apis-main仕様書 5項参照](https://github.com/SonyCSL/apis-main)。
+   * ※通信コマンドと通信フォーマット(JSON形式)の詳細は、[apis-main仕様書 5項参照](hhttps://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor5)。
 
 
 <br>
@@ -131,7 +131,7 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
         |制御 Mode番号|DC Grid 目標電圧値|DC Grid 上限電流値|Grid Droop 率|
       * 制御コマンド例
         * `/dcdc/set?mode=<Mode>&dvg=<DC Grid 電圧値>&dig=<DC Grid 電流値>&drg=<DC Grid Droop 率>`
-        *  ※通信コマンドと通信フォーマット(JSON形式)の詳細は、[apis-main仕様書 5項参照](https://github.com/SonyCSL/apis-main)
+        *  ※通信コマンドと通信フォーマット(JSON形式)の詳細は、[apis-main仕様書 5項参照](https://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor5)
 
 
 
@@ -144,7 +144,7 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
      * 特にDCグリッドの電流容量に関しては、１ユニットあたりの融通の最大電流と最大融通ペア数、グリッドの配線トポロジーから、電流が集中するポイントに配慮し設計すること。
 
 ### 3-4. コンピュータ(Linux-board)要求概要
-  * [apis-main仕様書 16項参照](https://github.com/SonyCSL/apis-main)
+  * [apis-main仕様書 16項参照](https://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor16)
 
 <br>
 
@@ -162,11 +162,11 @@ apis-main は、蓄電システムとDCグリッドの間に接続された DC/D
 
 * hwConfig.json の設定に必要なハードウェア仕様(数値)
   * ユニットを構成する蓄電システムや DC/DC converter の仕様に合わせて、適切に数値を設定する。
-    * [apis-main仕様書 6.2項参照](https://github.com/SonyCSL/apis-main)
+    * [apis-main仕様書 6.2項参照](https://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor6-2)
 
 * Policy.json の設定に必要なハードウェア仕様(数値)
   * 構築するグリッド(DC配線)の仕様に合わせて、適切に数値を設定する。
-    * [apis-main仕様書 6.4項参照](https://github.com/SonyCSL/apis-main)
+    * [apis-main仕様書 6.4項参照](https://github.com/SonyCSL/apis-main/blob/master/doc/jp/apis-main_specification.md#anchor6-4)
 
 
 <br>
