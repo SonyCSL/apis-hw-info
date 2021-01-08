@@ -15,7 +15,7 @@ APISハードウェア情報は、Sony CSL が開発した自律分散制御の�
 
 <br>
 
-**電力相互融通システムのハードウェア設計にあたっては、[Document](https://github.com/oes-github/apis-hw-requirements/blob/main/MAIN-DOCUMENT_JP.md) の他に、以下の点に注意すること**
+**電力相互融通システムのハードウェア設計にあたっては、[Document](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_JP.md) の他に、以下の点に注意すること**
 
 
 * **APIS のハードウェア制御ポリシー：APIS の制御対象は融通グリッドのみ**
@@ -33,4 +33,4 @@ APISハードウェア情報は、Sony CSL が開発した自律分散制御の�
 
 
 ## Documentation
-&emsp;[Documentation(JP)](https://github.com/oes-github/apis-hw-requirements/blob/master/MAIN-DOCUMENT_JP.md)
+&emsp;[Documentation(JP)](https://github.com/SonyCSL/apis-hw-info/blob/main/MAIN-DOCUMENT_JP.md)
